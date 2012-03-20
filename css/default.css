@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+body{
+    font-family: Arial;
+    font-size: 12px;
+    height: 100%;
+    min-height: 100%;
+}
+h1 { 
+    padding: .2em; 
+    margin: 0; 
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+}
+h3{
+    text-decoration: none !important;
+}
+/**
+*	Basic Layout Theme
+* 
+*	This theme uses the default layout class-names for all classes
+*	Add any 'custom class-names', from options: paneClass, resizerClass, togglerClass
+*/
+
+.ui-layout-pane { /* all 'panes' */ 
+    overflow: auto;
+} 
+
+.ui-layout-resizer { /* all 'resizer-bars' */ 
+    background: #DDD; 
+} 
+
+.ui-layout-toggler { /* all 'toggler-buttons' */ 
+    background: #AAA; 
+} 
+ul {
+    /* rules common to BOTH inner and outer UL */
+    z-index:100000;
+    margin:1ex 0;
+    padding:0;
+    list-style:	none;
+    cursor:pointer;
+    /* rules for outer UL only */
+    width:15ex;
+    position:relative;
+}
+/*ul li {
+    background-color: #EEE;
+    padding: 0.15em 1em 0.3em 5px;
+}*/
+ul ul {
+    display:	none;
+    position:	absolute;
+    width:100%;
+    left:-1px;
+    /* Pop-Up */
+    bottom:0;
+    margin:0;
+    margin-bottom: 1.55em;
+}
+.ui-layout-north ul ul {
+    /* Drop-Down */
+    bottom:		auto;
+    margin:		0;
+    margin-top:	1.45em;
+}
+ul ul li{ padding: 3px 1em 3px 5px; }
+ul ul li:hover	{ background-color: #FF9; }
+ul li:hover ul	{ display:block; background-color: #EEE; }
+
+.components{
+    margin: 0!important;
+    padding: 3px !important;
+}
+.components ul{
+    width: 100%;
+}
+.components li{
+    margin: 10px;
+    vertical-align: middle;
+    cursor: move !important;
+}
+#repositorio .bpmn{
+    width: 100%;
+    text-align: left;
+}
+
+#draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+#droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+
+#titulo{
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.bpmn{
+    text-align: center;
+}
+.element img{
+    border: 2px solid transparent;
+/*    padding: 20px;
+    width: 50px;
+    height: 50px;*/
+}
+.element img:hover{
+    border: 2px dotted #999;
+}
+.ui-resizable-helper { border: 2px dotted #00F; }
